@@ -15,14 +15,19 @@ public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
 	@Column(name = "name")
 	private String name;
+	
 	@Column(name = "cpf")
 	private String cpf;
+	
 	@Column(name = "birthday")
 	private String birthday;
+	
 	@Column(name = "email_id")
 	private String email;
+	
 	@Column(name = "name")
 	private String phone;
 		
