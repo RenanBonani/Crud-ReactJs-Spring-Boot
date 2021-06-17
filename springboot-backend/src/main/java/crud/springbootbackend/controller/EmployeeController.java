@@ -20,6 +20,7 @@ import crud.springbootbackend.exception.ResourceNotFoundException;
 import crud.springbootbackend.model.Employee;
 import crud.springbootbackend.repository.EmployeeRepository;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/v1/")
 public class EmployeeController {

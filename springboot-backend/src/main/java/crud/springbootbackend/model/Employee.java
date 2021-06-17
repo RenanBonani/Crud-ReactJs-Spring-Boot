@@ -28,7 +28,7 @@ public class Employee {
 	@Column(name = "email_id")
 	private String email;
 	
-	@Column(name = "name")
+	@Column(name = "phone")
 	private String phone;
 		
 
