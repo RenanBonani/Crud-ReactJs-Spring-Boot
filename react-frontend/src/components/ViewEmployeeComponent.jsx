@@ -17,34 +17,39 @@ class ViewEmployeeComponent extends Component {
         })
     }
 
+    cancel(){
+        this.props.history.push('/employees');
+    }
+
     render() {
         return (
             <div>
                 <br></br>
                 <div className = "card col-md-6 offset-md-3">
                     <h3 className = "text-center"> Detalhes Funcionario</h3>
-                    <div className = "card-body">
-                        <div className = "row">
-                            <label> Funcionarios Nome: </label>
-                            <div> { this.state.employee.name }</div>
+                    <div className = "card-body ">
+                        <div className = "row ">
+                            <label> Funcionarios Nome: </label> 
+                            <div className = "viewspace"> { this.state.employee.name }</div>
                         </div>
                         <div className = "row">
                             <label> Funcionario Cpf: </label>
-                            <div> { this.state.employee.cpf }</div>
+                            <div className = "viewspace"> { this.state.employee.cpf }</div>
                         </div>
                         <div className = "row">
                             <label> Funcionario Nascimento : </label>
-                            <div> { this.state.employee.birthday }</div>
+                            <div className = "viewspace"> { this.state.employee.birthday }</div>
                         </div>
                         <div className = "row">
                             <label> Funcionario Email: </label>
-                            <div> { this.state.employee.email }</div>
+                            <div className = "viewspace"> { this.state.employee.email }</div>
                         </div>
                         <div className = "row">
                             <label> Funcionario Contato: </label>
-                            <div> { this.state.employee.phone }</div>
-                        </div>
+                            <div className = "viewspace"> { this.state.employee.phone }</div>
+                        </div>                        
                     </div>
+                    <button className="btn btn-primary" onClick={this.cancel.bind(this)} >Voltar</button>
 
                 </div>
             </div>

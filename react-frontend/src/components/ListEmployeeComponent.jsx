@@ -38,9 +38,9 @@ class ListEmployeeComponent extends Component {
     render() {
         return (
             <div>
-                 <h2 className="text-center">Lista de Empregados</h2>
+                 <h2 className="text-center" style={{marginBottom: "10px", marginTop: "10px"}} >Lista de Empregados</h2>
                  <div className="row">
-                    <button className="btn btn-primary" onClick={this.addEmployee}>Add Empregado</button>
+                    <button className="btn btn-primary" onClick={this.addEmployee}>Cadastrar Funcionario</button>
                  </div>
                  <br></br>
                  <div className="row">
@@ -67,9 +67,10 @@ class ListEmployeeComponent extends Component {
                                              <td> {employee.email}</td>
                                              <td> {employee.phone}</td>
                                              <td>
-                                                 <button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Alterar </button>
+                                                 <button onClick={ () => this.editEmployee(employee.id)} className="btn btn-primary">Alterar </button>
+                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.id)} className="btn btn-primary">Visualizar </button>
                                                  <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Excluir </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.id)} className="btn btn-info">Visualizar </button>
+                                                 
                                              </td>
                                         </tr>
                                     )
